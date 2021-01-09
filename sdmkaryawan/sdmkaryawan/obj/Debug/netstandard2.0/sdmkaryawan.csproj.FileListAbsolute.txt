@@ -1,0 +1,16 @@
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\bin\Debug\netstandard2.0\sdmkaryawan.deps.json
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\bin\Debug\netstandard2.0\sdmkaryawan.dll
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\bin\Debug\netstandard2.0\ref\sdmkaryawan.dll
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\bin\Debug\netstandard2.0\sdmkaryawan.pdb
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\LoginPage.xaml.g.cs
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\Page1.xaml.g.cs
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\sdmkaryawan.AssemblyInfoInputs.cache
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\sdmkaryawan.AssemblyInfo.cs
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\sdmkaryawan.dll
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\ref\sdmkaryawan.dll
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\sdmkaryawan.pdb
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\sdmkaryawan.csproj.CoreCompileInputs.cache
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\XamlC.stamp
+D:\XAMARIN\sdmkaryawan\sdmkaryawan\sdmkaryawan\obj\Debug\netstandard2.0\sdmkaryawan.csprojAssemblyReference.cache

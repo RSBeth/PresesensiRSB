@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="sdmkaryawan.Page1"
+             xmlns:custom="clr-namespace:sdmkaryawan.View">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <RelativeLayout Grid.Row="0">
+            <!-- Behind Body content-->
+            <StackLayout Margin="10,50,10,10" >
+
+                <Label FontAttributes="Bold" >What is Lorem Ipsum?</Label>
+                <Label>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </Label>
+
+                <Label>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </Label>
+
+                <Label FontAttributes="Bold">Why do we use it?</Label>
+
+                <Label>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                </Label>
+
+            </StackLayout>
+
+            <Grid  x:Name="bottomSheet" Margin="0,0,0,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.93,Constant=0}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1,Constant=0}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1,Constant=0}">
+                <Grid.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"></PanGestureRecognizer>
+                </Grid.GestureRecognizers>
+                <!-- change the YConstraint factor value to adjust the height of the bottom sheet at initial stage-->
+
+                <OnPlatform x:TypeArguments="View">
+                    <On Platform="iOS">
+                        <custom:CustomBoxView CornerRadius="20"  Margin="0,0,0,0" BackgroundColor="White" ShadowColor="Black" ShadowOpacity="1" ShadowRadius="8" OffsetX="0" OffsetY="2">
+
+                        </custom:CustomBoxView>
+                    </On>
+                    <On Platform="Android">
+                        <custom:CustomFrame CornerRadius="20"  Margin="0,0,0,0" BackgroundColor="White">
+
+                        </custom:CustomFrame>
+                    </On>
+                </OnPlatform>
+
+
+
+
+                <!-- Bottom sheet body content-->
+                <!-- Place any thins you want to display inside the bottom sheet-->
+                <StackLayout Spacing="5" x:Name="bottomsheetStack" Margin="0,20,0,0">
+                    <!-- box view to show a bar to elobrate that this section can be dragged-->
+                    <BoxView HeightRequest="5" CornerRadius="2" WidthRequest="50" BackgroundColor="Gray" HorizontalOptions="Center"></BoxView>
+                    <!-- below is the body content of bottom sheet-->
+                    <ListView ItemsSource="{Binding Monkeys}" VerticalOptions="Fill" HorizontalOptions="FillAndExpand"
+                      HasUnevenRows="true" Margin="0,20,0,0" x:Name="bottomsheetListView" VerticalScrollBarVisibility="Never"
+                      >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.RowSpan="2"
+                                       Source="{Binding ImageUrl}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="60"
+                                       WidthRequest="60" />
+                                        <Label Grid.Column="1"
+                                       Text="{Binding Name}"
+                                       FontAttributes="Bold" />
+                                        <Label Grid.Row="1"
+                                       Grid.Column="1"
+                                       Text="{Binding Location}"
+                                       VerticalOptions="End" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+            </Grid>
+        </RelativeLayout>
+    </Grid>
+</ContentPage>

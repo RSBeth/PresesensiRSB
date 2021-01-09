@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="sdmkaryawan.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+
+   
+    <ContentPage.Content >
+
+
+        <ScrollView >
+            <Grid>
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="280"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="330"/>
+                    
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+
+                
+
+
+                <Image Source="bg7.jpg" Aspect="AspectFill" Grid.Row="0" Grid.RowSpan="4" VerticalOptions="Fill"  />
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" Grid.Row="0" Margin="0,0,0,0" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="150*"/>
+                        </Grid.RowDefinitions>
+                        <!--<Image Source="bg1.png" Aspect="Fill" HeightRequest="300" Grid.RowSpan="3" VerticalOptions="StartAndExpand"/>-->
+                        <StackLayout Margin="0,50,0,0">
+
+                            <Image Source="logorsb.png" VerticalOptions="CenterAndExpand" HeightRequest="70" Margin="10,0,0,0" Grid.Row="0" Opacity="0.9" />
+                            <Label Text="SELAMAT DATANG" Margin="0,10,0,0" FontSize="25" Grid.Row="1" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" Opacity="0.9" />
+                            <Label Text="APLIKASI SDM RS. BETHESDA" FontSize="Medium" Margin="0,-10,0,0" Grid.Row="2" HorizontalOptions="Center" TextColor="White" FontAttributes="Italic" Opacity="0.9"/>
+
+                        </StackLayout>
+
+                    </Grid>
+
+
+
+                    <!--<Image Source="logorsb.png" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0"/>-->
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" ></StackLayout>
+
+                <Frame Grid.Row="2" CornerRadius="10" Margin="20,-50,20,30" BorderColor="#F0F0F0" Opacity="1">
+                    <Grid RowSpacing="10"  Margin="15,0,15,0" BackgroundColor="Transparent" VerticalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="50"/>
+                            <!--<RowDefinition Height="30*"/>-->
+                        </Grid.RowDefinitions>
+
+                        <Entry x:Name="txtUsername" Grid.Row="1" Placeholder="Masukkan NIK" Keyboard="Default" MaxLength="4" PlaceholderColor="#bababa" FontSize="18"/>
+                        <Entry x:Name="txtPassword" Grid.Row="2" Placeholder="Masukkan Password" IsPassword="True" PlaceholderColor="#bababa" FontSize="18"/>
+                        
+                        
+                        <Button x:Name="btnLogin" Text="MASUK" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="3" Clicked="btnLogin_Clicked"/>
+                        <!--<Button x:Name="btnTanpaLogin" Text="MASUK tanpa login" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="4" Clicked="btnTanpaLogin_Clicked"/>-->
+                        <Label Text="Tidak bisa masuk / Belum Punya Akun" HorizontalOptions="Center" Grid.Row="4" Margin="0,20,0,0" FontSize="12"/>
+                        <Button x:Name="btnBantuan" Text="Bantuan" BackgroundColor="#206a5d" TextColor="White" HeightRequest="50" VerticalOptions="Center" Grid.Row="5" Clicked="btnTanpaLogin_Clicked"/>
+                        
+                    </Grid>
+                </Frame>
+
+                
+
+                <StackLayout Grid.Row="3" BackgroundColor="white" Opacity="1" >
+                    <Label HeightRequest="1"/>
+                    <Label x:Name="txtVersi" Text="Versi 1.0" VerticalOptions="Start" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="gray" FontSize="Micro" Margin="0,0,0,0" />
+                    <Label Text="IT RS Bethesda Yogyakarta" VerticalOptions="Start" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="gray" FontSize="Micro" Margin="0,-5,0,0" />
+                </StackLayout>
+
+
+                <ContentView x:Name="popupLoadingView" Grid.Row="0" Grid.RowSpan="4" BackgroundColor="#80000000"  Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="200" BackgroundColor="White">
+                            <ActivityIndicator x:Name="activityIndicator" IsRunning="True" Margin="0,40,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" WidthRequest="40" HeightRequest="40" ></ActivityIndicator>
+                            <Label x:Name="lblLoadingText" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" Text="Harap Tunggu..."></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+                
+            </Grid>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
