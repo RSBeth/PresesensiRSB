@@ -204,7 +204,7 @@ namespace sdmkaryawan
                         }
                         else
                         {
-                            await DisplayAlert("Keterangan", "Barcode tidak valid", "Ok");
+                            await DisplayAlert("Keterangan123", "Barcode tidak valid", "Ok");
                         }
                     }
                     else
